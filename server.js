@@ -110,9 +110,14 @@ app.post('/api/send-project-request', upload.array('referenceFiles'), async (req
     }
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello! server is running correctly');
+});
+
 // Start Server
 // Export the app for Vercel
 module.exports = app;
+
 
 // Start Server only if not running in Vercel (or dev mode)
 if (process.env.NODE_ENV !== 'production') {
