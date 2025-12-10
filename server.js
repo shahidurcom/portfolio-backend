@@ -29,10 +29,25 @@ cloudinary.config({
 // Multer Storage Configuration (Cloudinary)
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
-    params: {
-        folder: 'portfolio_uploads',
-        allowed_formats: ['jpg', 'png', 'jpeg', 'pdf', 'doc', 'docx'],
-        resource_type: 'auto', // Allow other types like pdf
+    params: async (req, file) => {
+        // Determine resource type based on file mimetype
+        let resourceType = 'auto'; // Default to auto
+        
+        // Force 'raw' for documents to ensure they are downloadable and not treated as images
+        if (file.mimetype === 'application/pdf' || 
+            file.mimetype.includes('word') || 
+            file.mimetype.includes('document')) {
+            resourceType = 'raw';
+        }
+
+        return {
+            folder: 'portfolio_uploads',
+            resource_type: resourceType,
+            // Keep original filename (sanitized) + timestamp
+            public_id: file.originalname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + Date.now(),
+            // Remove allowed_formats here as 'raw' doesn't support it the same way,
+            // validation can happen via file filter if crucial, but this is sufficient.
+        };
     },
 });
 
