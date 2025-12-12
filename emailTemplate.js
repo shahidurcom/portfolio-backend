@@ -255,14 +255,21 @@ const generateEmailHtml = (data) => {
             </td>
           </tr>
 
-          <!-- Footer Section -->
+        <!-- Footer Section -->
           <tr>
             <td style="background:#f9fafb; padding:20px; text-align:center;">
               <p style="margin:0; font-size:14px; color:#555;">
-                Need adjustments? Just reply to this email.
+                Revisions: 7 Days
               </p>
-              <p style="margin:5px 0 0; font-size:13px; color:#333;">
-                <strong>${agencyName}</strong>
+              <p style="margin:10px 0 0; font-size:14px; color:#555;">
+                Thank You<br>
+                Thank you for choosing our design services!
+              </p>
+              <p style="margin:15px 0 0; font-size:13px; color:#333; line-height:1.6;">
+                <strong>Project Request Form:</strong> <a href="https://shahidur.com" style="color:#4338ca; text-decoration:none;">shahidur.com</a><br>
+                <strong>Portfolio:</strong> Shahidur Rahaman – Designer<br>
+                <strong>Email:</strong> <a href="mailto:portfolio@shahidur.com" style="color:#4338ca; text-decoration:none;">portfolio@shahidur.com</a><br>
+                <strong>Mobile:</strong> <a href="tel:+8801834418446" style="color:#4338ca; text-decoration:none;">+8801834418446</a>
               </p>
             </td>
           </tr>
