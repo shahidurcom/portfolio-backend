@@ -242,12 +242,13 @@ const generateEmailHtml = (data) => {
                       <strong>Payment Methods:</strong> 💳 Card • 💼 Bank • 🌐 PayPal • 💸 Wise
                     </p>
 
+                    <!-- Additional Information
                     <p style="font-size:12px; color:#666; line-height:1.6;">
                       • Final files include PNG, JPG, SVG, PDF, AI<br />
                       • Any extra revisions may incur additional charges<br />
                       • Thank you for choosing our creative service ❤️
                     </p>
-
+                    -->
                   </td>
                 </tr>
               </table>
