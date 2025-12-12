@@ -210,7 +210,7 @@ const generateEmailHtml = (data) => {
                         </tr>
                         <tr>
                           <td style="padding:12px; border:1px solid #e5e7eb;">🔄 Revisions</td>
-                          <td style="padding:12px; border:1px solid #e5e7eb;">Unlimited</td>
+                          <td style="padding:12px; border:1px solid #e5e7eb;">7 Days</td>
                           <td style="padding:12px; border:1px solid #e5e7eb;">Included</td>
                           <td style="padding:12px; border:1px solid #e5e7eb;">$0</td>
                         </tr>
@@ -232,7 +232,7 @@ const generateEmailHtml = (data) => {
                       <tr>
                         <td
                           style="text-align:right; padding:10px 0; font-size:24px; font-weight:800; color:#4338ca;">
-                          TOTAL: ${amount}
+                          Total: ${amount}
                         </td>
                       </tr>
                     </table>
@@ -259,9 +259,6 @@ const generateEmailHtml = (data) => {
         <!-- Footer Section -->
           <tr>
             <td style="background:#f9fafb; padding:20px; text-align:center;">
-              <p style="margin:0; font-size:14px; color:#555;">
-                Revisions: 7 Days
-              </p>
               <p style="margin:10px 0 0; font-size:14px; color:#555;">
                 Thank You<br>
                 Thank you for choosing our design services!
